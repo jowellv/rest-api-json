@@ -1,0 +1,19 @@
+{
+  "name": "rest-api-json",
+  "version": "0.1.0",
+  "description": "http server with simple persistence",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jowellv/rest-api-json.git"
+  },
+  "author": "jowell.villasin@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jowellv/rest-api-json/issues"
+  },
+  "homepage": "https://github.com/jowellv/rest-api-json"
+}
