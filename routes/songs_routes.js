@@ -69,6 +69,17 @@ module.exports = function(router) {
     });
   });
 
+  router.patch('/songs/:id', function(req, res) {
+    var updatedSong = req.body;
+    fs.writeFile('data/song' + req.params.id + '.json', JSON.stringify(updatedSong), function(err, data) {
+      if(err) {
+        console.log(err);
+        return res.status(500).json('server dun messed up');
+      }
+      res.json({msg:'success'});
+    });
+  });
+
   router.delete('/songs/:id', function(req, res) {
     fs.unlink('data/song' + req.params.id + '.json', function(err) {
       if(err) {

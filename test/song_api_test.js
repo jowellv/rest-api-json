@@ -66,6 +66,16 @@ describe('song REST api', function() {
           });
       });
 
+      it('should patch a song', function() {
+        chai.request('localhost:3000')
+          .patch('/api/songs/999')
+          .send({title:'new title', artist:'new artist'})
+          .end(function(err, res) {
+            expect(err).to.eql(null);
+            expect(res.body.msg).to.eql('success');
+          });
+      });
+
     it('should delete a song', function(done) {
       chai.request('localhost:3000')
         .del('/api/songs/999')
